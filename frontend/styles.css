@@ -1,0 +1,27 @@
+:root{--bg:#f6f8fa;--card:#fff;--ink:#1d2733;--muted:#5d6b7a;--accent:#0b6e8a;--accent-ink:#fff;--line:#d9e0e7}
+[data-theme=forest]{--bg:#f3f7f2;--accent:#2f6b3f;--line:#d5e0d3}
+[data-theme=sunset]{--bg:#fbf4f0;--accent:#b4442a;--line:#ecd9d1}
+[data-theme=mono]{--bg:#f4f4f4;--accent:#222;--line:#d8d8d8}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;background:var(--bg);color:var(--ink);line-height:1.6}
+h1,h2,h3,button,label,input,select,textarea{font-family:system-ui,Segoe UI,Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:1.5rem 1rem}
+header.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+header.top h1{font-size:1.3rem;margin:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1.2rem;margin:1rem 0}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+label{display:block;font-size:.9rem;font-weight:600;margin:.7rem 0 .2rem}
+input,select,textarea{width:100%;padding:.55rem;border:1px solid var(--line);border-radius:4px;font-size:1rem}
+button,.btn{background:var(--accent);color:var(--accent-ink);border:0;padding:.55rem 1rem;border-radius:4px;cursor:pointer;font-size:.95rem;text-decoration:none;display:inline-block;margin-top:.8rem}
+button.ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+button.small{padding:.2rem .6rem;margin:0}
+:focus-visible{outline:3px solid #f2a900;outline-offset:2px}
+#msg{padding:.6rem 1rem;border-radius:4px;margin:1rem 0;display:none}
+#msg.ok,#msg.err{display:block}
+#msg.ok{background:#e3f4e8;color:#1b5e32}#msg.err{background:#fde8e6;color:#9b2c1f}
+.row{display:flex;justify-content:space-between;align-items:center;gap:.5rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}
+.muted{color:var(--muted)}.hidden{display:none}
+.hero h2{font-size:2.4rem;margin:.2rem 0}
+.tag{display:inline-block;border:1px solid var(--accent);color:var(--accent);border-radius:20px;padding:.1rem .7rem;margin:.2rem;font-family:system-ui,sans-serif;font-size:.9rem}
+@media(max-width:600px){.hero h2{font-size:1.8rem}}

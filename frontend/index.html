@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio Website Generator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><h1>Portfolio Website Generator</h1>
+    <div id="nav" class="hidden"><a id="viewLink" class="btn" target="_blank">View my portfolio</a> <button id="logout" class="ghost">Log out</button></div>
+  </header>
+  <div id="msg" role="status"></div>
+
+  <section id="auth">
+    <p>Fill in your details once and get a public portfolio page you can share.</p>
+    <div class="grid">
+      <form id="registerForm" class="card"><h2>Create account</h2>
+        <label for="rUser">Username (becomes your link)</label><input id="rUser" required minlength="3" maxlength="20">
+        <label for="rEmail">Email</label><input id="rEmail" type="email" required>
+        <label for="rPass">Password (8+ characters)</label><input id="rPass" type="password" required minlength="8">
+        <button>Create account</button></form>
+      <form id="loginForm" class="card"><h2>Log in</h2>
+        <label for="lEmail">Email</label><input id="lEmail" type="email" required>
+        <label for="lPass">Password</label><input id="lPass" type="password" required>
+        <button>Log in</button></form>
+    </div>
+  </section>
+
+  <section id="dash" class="hidden">
+    <form id="profileForm" class="card"><h2>Your details</h2>
+      <label for="full_name">Full name</label><input id="full_name" required maxlength="80">
+      <label for="headline">Headline (e.g. B.Tech CSE student)</label><input id="headline" maxlength="120">
+      <label for="bio">About you</label><textarea id="bio" rows="4" maxlength="1000"></textarea>
+      <label for="public_email">Contact email shown on page</label><input id="public_email" type="email" maxlength="120">
+      <label for="github">GitHub link</label><input id="github" placeholder="https://github.com/you">
+      <label for="linkedin">LinkedIn link</label><input id="linkedin" placeholder="https://linkedin.com/in/you">
+      <label for="theme">Color theme</label>
+      <select id="theme"><option value="ocean">Ocean</option><option value="forest">Forest</option><option value="sunset">Sunset</option><option value="mono">Mono</option></select>
+      <button>Save details</button></form>
+
+    <div class="grid">
+      <div class="card"><h2>Projects</h2>
+        <form id="projectForm">
+          <label for="ptitle">Title</label><input id="ptitle" required maxlength="80">
+          <label for="pdesc">Description</label><textarea id="pdesc" rows="2" maxlength="500"></textarea>
+          <label for="ptech">Tech used</label><input id="ptech" maxlength="120" placeholder="HTML, CSS, Node.js">
+          <label for="plink">Link</label><input id="plink" placeholder="https://...">
+          <button>Add project</button></form>
+        <div id="projectList"></div></div>
+      <div class="card"><h2>Skills</h2>
+        <form id="skillForm">
+          <label for="sname">Skill</label><input id="sname" required maxlength="40">
+          <label for="slevel">Level</label>
+          <select id="slevel"><option value="1">1 - Beginner</option><option value="2">2</option><option value="3" selected>3 - Comfortable</option><option value="4">4</option><option value="5">5 - Strong</option></select>
+          <button>Add skill</button></form>
+        <div id="skillList"></div></div>
+    </div>
+  </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
